@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elegant Jewelry Collection</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            text-align: center;
+            padding: 3rem 1rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 300;
+            letter-spacing: 3px;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            font-style: italic;
+            opacity: 0.9;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+        }
+
+        .jewelry-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .jewelry-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .jewelry-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+        }
+
+        .jewelry-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .jewelry-info {
+            padding: 1.5rem;
+        }
+
+        .jewelry-name {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: #2c3e50;
+        }
+
+        .jewelry-description {
+            color: #666;
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+
+        .jewelry-price {
+            font-size: 1.3rem;
+            color: #c0392b;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #c0392b 0%, #e74c3c 100%);
+            color: white;
+            padding: 0.8rem 2rem;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .btn:hover {
+            background: linear-gradient(135deg, #a93226 0%, #c0392b 100%);
+            transform: scale(1.05);
+        }
+
+        .category-badge {
+            display: inline-block;
+            background: #f39c12;
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            .jewelry-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>✨ ELEGANT JEWELRY ✨</h1>
+        <p>Timeless Beauty, Exquisite Craftsmanship</p>
+    </header>
+
+    <div class="container">
+        <div class="jewelry-grid">
+            <!-- Jewelry Item 1 -->
+            <div class="jewelry-card">
+                <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=600&h=400&fit=crop" alt="Diamond Necklace" class="jewelry-image">
+                <div class="jewelry-info">
+                    <span class="category-badge">Necklaces</span>
+                    <h2 class="jewelry-name">Diamond Eternity Necklace</h2>
+                    <p class="jewelry-description">Stunning 18k white gold necklace featuring brilliant-cut diamonds in a timeless design.</p>
+                    <p class="jewelry-price">$2,499.00</p>
+                    <button class="btn">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Jewelry Item 2 -->
+            <div class="jewelry-card">
+                <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=600&h=400&fit=crop" alt="Gold Ring" class="jewelry-image">
+                <div class="jewelry-info">
+                    <span class="category-badge">Rings</span>
+                    <h2 class="jewelry-name">Sapphire Halo Ring</h2>
+                    <p class="jewelry-description">Exquisite blue sapphire surrounded by a halo of diamonds set in platinum.</p>
+                    <p class="jewelry-price">$3,299.00</p>
+                    <button class="btn">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Jewelry Item 3 -->
+            <div class="jewelry-card">
+                <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=600&h=400&fit=crop" alt="Pearl Earrings" class="jewelry-image">
+                <div class="jewelry-info">
+                    <span class="category-badge">Earrings</span>
+                    <h2 class="jewelry-name">Classic Pearl Drops</h2>
+                    <p class="jewelry-description">Elegant freshwater pearl earrings with 14k yellow gold settings.</p>
+                    <p class="jewelry-price">$899.00</p>
+                    <button class="btn">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Jewelry Item 4 -->
+            <div class="jewelry-card">
+                <img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=600&h=400&fit=crop" alt="Bracelet" class="jewelry-image">
+                <div class="jewelry-info">
+                    <span class="category-badge">Bracelets</span>
+                    <h2 class="jewelry-name">Tennis Bracelet</h2>
+                    <p class="jewelry-description">Classic tennis bracelet with round brilliant diamonds in 18k white gold.</p>
+                    <p class="jewelry-price">$4,599.00</p>
+                    <button class="btn">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Jewelry Item 5 -->
+            <div class="jewelry-card">
+                <img src="https://images.unsplash.com/photo-1603561591411-07134e71a2a9?w=600&h=400&fit=crop" alt="Emerald Ring" class="jewelry-image">
+                <div class="jewelry-info">
+                    <span class="category-badge">Rings</span>
+                    <h2 class="jewelry-name">Emerald Cut Engagement Ring</h2>
+                    <p class="jewelry-description">Breathtaking emerald-cut diamond solitaire in a cathedral setting.</p>
+                    <p class="jewelry-price">$5,999.00</p>
+                    <button class="btn">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Jewelry Item 6 -->
+            <div class="jewelry-card">
+                <img src="https://images.unsplash.com/photo-1573408301185-9146fe634ad0?w=600&h=400&fit=crop" alt="Gold Earrings" class="jewelry-image">
+                <div class="jewelry-info">
+                    <span class="category-badge">Earrings</span>
+                    <h2 class="jewelry-name">Rose Gold Hoops</h2>
+                    <p class="jewelry-description">Modern geometric hoops in 14k rose gold with a polished finish.</p>
+                    <p class="jewelry-price">$699.00</p>
+                    <button class="btn">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Elegant Jewelry. All rights reserved.</p>
+        <p>Crafted with love and precision</p>
+    </footer>
+</body>
+</html>
